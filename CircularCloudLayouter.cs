@@ -20,8 +20,8 @@ namespace TagsCloudVisualization
 
         private Point CalculateNewLocation()
         {
-            var x = (int) (t * a * Math.Cos(t*50)) + center.X;
-            var y = (int) (t * a * Math.Sin(t*50)) + center.Y;
+            var x = (int) (t * a * Math.Cos(t * 50)) + center.X;
+            var y = (int) (t * a * Math.Sin(t * 50)) + center.Y;
             t += 0.1;
             return new Point(x, y);
         }

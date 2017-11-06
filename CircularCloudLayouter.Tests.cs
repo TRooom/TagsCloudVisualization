@@ -26,7 +26,7 @@ namespace TagsCloudVisualization
             rect.Size.Should().Be(defaultSize);
         }
 
-        [Test,Timeout(100)]
+        [Test, Timeout(100)]
         public void AddTwoRectangles_InDifferentPoints()
         {
             var rect1 = defaultLayouter.PutNextRectangle(defaultSize);
@@ -34,7 +34,7 @@ namespace TagsCloudVisualization
             rect1.Location.Should().NotBe(rect2.Location);
         }
 
-        [Test,Timeout(100)]
+        [Test, Timeout(100)]
         public void AddTwoRectangles_WithoutCrossing()
         {
             var rect1 = defaultLayouter.PutNextRectangle(defaultSize);
@@ -54,8 +54,7 @@ namespace TagsCloudVisualization
                 lasAdded = rect.Location;
             }
             var distance = Math.Sqrt(lasAdded.Y * lasAdded.Y + lasAdded.X * lasAdded.X);
-            distance.Should().BeLessThan((int) ((100/4) * Math.Sqrt(8)));
+            distance.Should().BeLessThan((int) ((100 / 4) * Math.Sqrt(8)));
         }
-        
     }
 }
